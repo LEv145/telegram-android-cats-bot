@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "Telegram android cats bot"
+version = "0.1.0"
+description = "Behold My Awesome Project!"
+authors = ["LEv145"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "telegram_android_cats_bot", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiogram = "3.0.0b6"
+colorlog = "^6.7.0"
+pydantic = "^1.10.2"
+pymaybe = {git = "https://github.com/LEv145/pymaybe"}
+
+[tool.poetry.group.dev.dependencies]
+mkinit = "^1.0.0"
+mypy = "^0.991"
+flake8-commas = {git = "https://github.com/LEv145/flake8-commas"}
+isort = "^5.10.1"
+pyproject-flake8 = "^6.0.0"
+pylint = "^2.15.9"
+
+[tool.poetry.scripts]
+telegram_android_cats_bot = "telegram_android_cats_bot.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[mypy]
+strict_optional = true
+
+[tool.flake8]
+max-line-length = 99
+ignore = [
+    "F401",  # unused-import
+]
+
+[tool.isort]
+include_trailing_comma = true
+multi_line_output = 3
+force_grid_wrap = 2
+lines_after_imports = 2
+src_paths = ["src/telegram_android_cats_bot", "tests"]
+
+[tool.pylint]
+extension-pkg-whitelist="pydantic"
+disable = [
+    "missing-module-docstring",
+    "missing-function-docstring",
+    "missing-class-docstring",
+    "unused-import",
+    "too-few-public-methods",
+]

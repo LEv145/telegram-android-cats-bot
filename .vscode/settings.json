@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "aiogram",
+        "colorlog",
+        "levelname",
+        "pydantic",
+        "pymaybe",
+        "TACB"
+    ],
+    "python.linting.flake8Path": "/home/lev145/.cache/pypoetry/virtualenvs/telegram_android_cats_bot-AAMzk20f-py3.10/bin/pflake8",
+    "isort.args": [
+        "--settings-file",
+        "./pyproject.toml"
+    ]
+}
